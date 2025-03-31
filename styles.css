@@ -93,7 +93,7 @@ nav ul li a:hover {
     text-align: center;
     padding: 400px 20px 250px;
     background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), 
-                url('images/5.jpg');
+                url('./images/5.jpg');
     background-size: cover;
     background-position: center;
     color: #fff;
