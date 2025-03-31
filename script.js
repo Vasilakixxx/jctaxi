@@ -15,3 +15,26 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 });
+
+// Popup functionality
+function openPopup(tourType) {
+    document.getElementById('popup-overlay').style.display = 'block';
+    document.getElementById(`${tourType}-popup`).style.display = 'block';
+    document.body.style.overflow = 'hidden'; // Prevent scrolling
+}
+
+function closePopup() {
+    document.getElementById('popup-overlay').style.display = 'none';
+    const popups = document.querySelectorAll('.popup');
+    popups.forEach(popup => {
+        popup.style.display = 'none';
+    });
+    document.body.style.overflow = 'auto'; // Re-enable scrolling
+}
+
+// Close when pressing ESC
+document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape') {
+        closePopup();
+    }
+});

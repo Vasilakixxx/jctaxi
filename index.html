@@ -4,14 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Luxury Taxi Service</title>
-    <link rel="icon" href="images/image1.jpeg" type="image/x-icon">
+    <link rel="icon" href="images/Logo_Josh-4.PNG" type="image/x-icon">
     <link rel="stylesheet" href="./styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
     <header>
         <div class="logo-container">
-            <img src="images/image1.jpeg" alt="Golden Taxi Logo" class="logo-img">
+            <img src="images/Logo_Josh-3.PNG" alt="Golden Taxi Logo" class="logo-img">
           
         </div>
         
@@ -24,10 +24,11 @@
         
         <!-- Regular Navigation -->
         <nav class="main-nav">
-            <ul class="nav-links">
-                <li><a href="#services">Services</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#contact">Contact</a></li>
+            <ul>
+                <li><a class="font" href="#services"><i class="fas fa-car"></i>Taxi Services</a></li>
+                <li><a class="font" href="yachts.html"><i class="fas fa-ship"></i>Yacht Cruises</a></li> <!-- New Link -->
+                <li><a class="font" href="#about"><i class="fas fa-info-circle"></i>About</a></li>
+                <li><a class="font" href="#contact"><i class="fas fa-phone"></i>Contact</a></li>
             </ul>
         </nav>
     </header>
@@ -40,31 +41,198 @@
         </a>
     </section>
     
+    <section class="yacht-promo">
+        <div class="promo-content">
+            <h3> Luxury Yacht Cruises Available!</h3>
+            <p>  Book your golden experience today</p>
+            <a href="yachts.html" class="cta-button golden-glow">
+                <i class="fas fa-ship"></i> Explore Cruises
+            </a>
+        </div>
+    </section>
+
     <section id="services" class="services">
         <h2>Our Services</h2>
         <div class="service-grid">
-            <div class="service-item">
-                <img src="images/Beauty_1.jpg" alt="Airport Transfer">
+            <!-- Airport Transfers -->
+            <div class="service-item" onclick="openPopup('airport')">
+                <img src="images/1.JPG"     
+                     alt="Airport Transfer" 
+                     loading="lazy">
                 <h3>Airport Transfers</h3>
+                <p>Punctual and comfortable airport journeys</p>
             </div>
-            <div class="service-item">
-                <img src="images/Gstaad+Limousine+Service+by+Taxi+Simon+Mercedes-Benz+S-Class2.jpg" alt="City Rides">
+    
+            <!-- City Rides -->
+            <div class="service-item" onclick="openPopup('city')">
+                <img src="images/3.JPG" 
+                     alt="City Rides" 
+                     loading="lazy">
                 <h3>City Rides</h3>
+                <p>Reliable urban transportation</p>
             </div>
-            <div class="service-item">
-                <img src="images/images.jpg" alt="Special Events">
-                <h3>Special Events</h3>
+    
+            <!-- Wedding Transfers -->
+            <div class="service-item" onclick="openPopup('wedding')">
+                <img src="images/wedding1.JPG" 
+                     alt="Wedding Transfer" 
+                     loading="lazy">
+                <h3>Wedding Transfers</h3>
+                <p>Elegant transportation for your special day</p>
+            </div>
+    
+            <!-- Ghost Town Tour -->
+            <div class="service-item" onclick="openPopup('ghost')">
+                <img src="images/50.JPG" 
+                     alt="Ghost Town Tour" 
+                     loading="lazy">
+                <h3>Ghost Town Tour</h3>
+                <p>Explore abandoned settlements with our guides</p>
+            </div>
+            
+            <!-- Sunset Tour -->
+            <div class="service-item" onclick="openPopup('sunset')">
+                <img src="images/40.JPG" 
+                     alt="Sunset Tour" 
+                     loading="lazy">
+                <h3>Sunset Tour</h3>
+                <p>Witness breathtaking sunsets at premium locations</p>
             </div>
         </div>
     </section>
     
+    <!-- Popup Overlay -->
+    <div id="popup-overlay" class="popup-overlay" onclick="closePopup()"></div>
+    
+    <!-- Airport Transfer Popup -->
+    <div id="airport-popup" class="popup">
+        <button class="close-btn" onclick="closePopup()">&times;</button>
+        <h3>Premium Airport Transfers</h3>
+        <div class="popup-gallery">
+            <img src="images/7.JPG" alt="Airport Transfer 1">
+            <img src="images/6.JPG" alt="Airport Transfer 2">
+        </div>
+        <div class="popup-content">
+            <p>Our airport service includes:</p>
+            <ul>
+                <li>24/7 availability</li>
+            </ul>
+            <a href="https://wa.me/+35799009967" class="book-btn" onclick="closePopup()">Book Now</a>
+        </div>
+    </div>
+    
+    <!-- City Rides Popup -->
+    <div id="city-popup" class="popup">
+        <button class="close-btn" onclick="closePopup()">&times;</button>
+        <h3>City Transportation</h3>
+        <div class="popup-gallery">
+            <img src="images/8.JPG" alt="City Ride 1">
+            <img src="images/10.JPG" alt="City Ride 2">
+        </div>
+        <div class="popup-content">
+            <p>Features:</p>
+            <ul>
+                <li>Hourly or point-to-point service</li>
+                <li>Knowledgeable local drivers</li>
+                <li>Clean, air-conditioned vehicles</li>
+             
+            </ul>
+            <a href="https://wa.me/+35799009967" class="book-btn" onclick="closePopup()">Book Now</a>
+        </div>
+    </div>
+    
+    <!-- Wedding Transfer Popup -->
+    <div id="wedding-popup" class="popup">
+        <button class="close-btn" onclick="closePopup()">&times;</button>
+        <h3>Wedding Transportation</h3>
+        <div class="popup-gallery">
+            <img src="images/wedding3.JPG" alt="Wedding Car 1">
+            <img src="images/wedding2.JPG" alt="Wedding Car 2">
+        </div>
+        <div class="popup-content">
+            <p>Special features:</p>
+            <ul>
+                <li>Bridal party coordination</li>
+                <li>Flexible waiting times</li>
+                <li>Complementary red carpet</li>
+            </ul>
+            <a href="https://wa.me/+35799009967" class="book-btn" onclick="closePopup()">Book Now</a>
+        </div>
+    </div>
+    
+    <!-- Ghost Town Popup -->
+    <div id="ghost-popup" class="popup">
+        <button class="close-btn" onclick="closePopup()">&times;</button>
+        <h3>Ghost Town Adventure</h3>
+        <div class="popup-gallery">
+            <img src="images/51.JPG" alt="Ghost Town 1">
+            <img src="images/47.JPG" alt="Ghost Town 2">
+            <img src="images/41.JPG" alt="Ghost Town 3">
+            <img src="images/48.JPG" alt="Ghost Town 4">
+        </div>
+        <div class="popup-content">
+            <p>Choices:</p>
+            <ul>
+                
+                <li>2 hour Tour:</li>
+                <li>Pick up and drop off from your destination.</li>
+                <li>Guided tour through the ghost Town.</li>
+                <li>Pictures taken and sent to your phone.</li>
+                <li>Price starts from €120</li>
+                <li>4 hour Tour:</li>
+                <li>Pick up and drop off from your destination. </li>
+                <li>Guided tour through the ghost Town.</li>
+                <li>Tour in the old Town of famagusta.</li>
+                <li>deserts at a nice bakery at the end of the tour</li>
+                <li>Pictures taken and sent to your phone.</li>
+                <li>Price starts from €200</li>
+                <li>6 hour Tour:</li>
+                <li>Pick up and drop off from your destination. </li>
+                <li>Tour of the Ancient ruins of Salamis</li>
+                <li>Guided tour through the ghost Town.</li>
+                <li>Tour in the old Town of famagusta.</li>
+                <li>deserts at a nice bakery at the end of the tour</li>
+                <li>Pictures taken and sent to your phone.</li>
+                <li>Price starts from : €250</li>
+            </ul>
+            <a href="https://wa.me/+35799009967" class="book-btn" onclick="closePopup()">Book This Tour</a>
+        </div>
+    </div>
+    
+    <!-- Sunset Tour Popup -->
+    <div id="sunset-popup" class="popup">
+        <button class="close-btn" onclick="closePopup()">&times;</button>
+        <h3>Sunset Tour</h3>
+        <div class="popup-gallery">
+            <img src="images/37.JPG" alt="Sunset 1">
+            <img src="images/31.JPG" alt="Sunset 2">
+            <img src="images/35.JPG" alt="Sunset 3">
+            <img src="images/34.JPG" alt="Sunset 4">
+        </div>
+        <div class="popup-content">
+        
+            <ul>
+                <li>Love bridge</li>
+                <li>sea caves</li>
+                <li>Blue Lagoon</li>
+                <li>Ayioi Anargiroi Church</li>
+                <li>Sunset view on Cape Greco</li>
+                <li>Duration 2 hours</li>
+                <li>Pictures included</li>
+                <li>Price starting from €100</li>
+            </ul>
+            <a href="https://wa.me/+35799009967" class="book-btn" onclick="closePopup()">Book This Tour</a>
+        </div>
+    </div>
+    
     <section id="about" class="about">
         <h2>About Us</h2>
         <div class="about-content">
-            <img src="images/Mercedes-Taxi-Club.jpg" alt="Our Taxi">
+            <img src="images/5.jpg" alt="Our Taxi">
             <div class="about-text">
-                <p>Jc Taxi has been providing premium transportation services. Our professional drivers and luxury vehicles ensure you arrive at your destination safely and in style.</p>
-                <p>We pride ourselves on punctuality, cleanliness, and exceptional customer service. Whether you need airport transfer, city ride, or transportation for special events, we've got you covered.</p>
+                <p>Jc Taxi has been providing premium transportation services since 2022. We are a Family run taxi firm with professional drivers and luxury vehicles. </p>
+                <p>We pride ourselves on punctuality, cleanliness, and exceptional customer service. Whether you need airport transfer, city ride, or transportation for special events, or Tours we've got you covered.</p>
+                <p>We don't want to be just a simple taxi ride, but we would like to provide an experience which will be part of your memories of your Holiday in Cyprus!</p>
             </div>
         </div>
     </section>
