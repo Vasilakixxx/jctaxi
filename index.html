@@ -3,13 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <title>JC Taxi Service </title>
     <link rel="icon" href="images/Logo_Josh-4.PNG" type="image/x-icon">
-
-    <title>JC Taxi Service</title>
-    <link rel="icon" href="images/image1.jpeg" type="image/x-icon">
-
     <link rel="stylesheet" href="./styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
@@ -32,6 +27,7 @@
             <ul>
                 <li><a class="font" href="#services"><i class="fas fa-car"></i>Taxi Services</a></li>
                 <li><a class="font" href="yachts.html"><i class="fas fa-ship"></i>Yacht Cruises</a></li> <!-- New Link -->
+                <li><a class="font" href="recomondations.html"><i class="fas fa-utensils"></i> Recommandations</a></li>
                 <li><a class="font" href="#about"><i class="fas fa-info-circle"></i>About</a></li>
                 <li><a class="font" href="#contact"><i class="fas fa-phone"></i>Contact</a></li>
             </ul>
@@ -61,47 +57,51 @@
         <div class="service-grid">
             <!-- Airport Transfers -->
             <div class="service-item" onclick="openPopup('airport')">
-                <img src="images/1.JPG"     
-                     alt="Airport Transfer" 
-                     loading="lazy">
+                <img src="images/image12.jpeg" alt="Airport Transfer" loading="lazy">
                 <h3>Airport Transfers</h3>
                 <p>Punctual and comfortable airport journeys</p>
             </div>
     
             <!-- City Rides -->
             <div class="service-item" onclick="openPopup('city')">
-                <img src="images/3.JPG" 
-                     alt="City Rides" 
-                     loading="lazy">
+                <img src="images/image11.jpeg" alt="City Rides" loading="lazy">
                 <h3>City Rides</h3>
                 <p>Reliable urban transportation</p>
             </div>
     
             <!-- Wedding Transfers -->
             <div class="service-item" onclick="openPopup('wedding')">
-                <img src="images/wedding1.JPG" 
-                     alt="Wedding Transfer" 
-                     loading="lazy">
+                <img src="images/wedding3.JPG" alt="Wedding Transfer" loading="lazy">
                 <h3>Wedding Transfers</h3>
                 <p>Elegant transportation for your special day</p>
             </div>
     
             <!-- Ghost Town Tour -->
             <div class="service-item" onclick="openPopup('ghost')">
-                <img src="images/50.JPG" 
-                     alt="Ghost Town Tour" 
-                     loading="lazy">
+                <img src="images/50.JPG" alt="Ghost Town Tour" loading="lazy">
                 <h3>Ghost Town Tour</h3>
                 <p>Explore abandoned settlements with our guides</p>
             </div>
             
             <!-- Sunset Tour -->
             <div class="service-item" onclick="openPopup('sunset')">
-                <img src="images/40.JPG" 
-                     alt="Sunset Tour" 
-                     loading="lazy">
+                <img src="images/40.JPG" alt="Sunset Tour" loading="lazy">
                 <h3>Sunset Tour</h3>
                 <p>Witness breathtaking sunsets at premium locations</p>
+            </div>
+            
+            <!-- Quad/Buggy Rental -->
+            <div class="service-item" onclick="openPopup('quad')">
+                <img src="images/image8.jpeg" alt="Quad/Buggy Rental" loading="lazy">
+                <h3>Quad & Buggy Rental</h3>
+                <p>Adventure vehicles for off-road exploration</p>
+            </div>
+            
+            <!-- Car Rental -->
+            <div class="service-item" onclick="openPopup('car-rental')">
+                <img src="images/image2.jpeg" alt="Car Rental" loading="lazy">
+                <h3>Premium Car Rental</h3>
+                <p>Vehicles for your travels</p>
             </div>
         </div>
     </section>
@@ -140,7 +140,6 @@
                 <li>Hourly or point-to-point service</li>
                 <li>Knowledgeable local drivers</li>
                 <li>Clean, air-conditioned vehicles</li>
-             
             </ul>
             <a href="https://wa.me/+35799009967" class="book-btn" onclick="closePopup()">Book Now</a>
         </div>
@@ -157,9 +156,9 @@
         <div class="popup-content">
             <p>Special features:</p>
             <ul>
-                <li>Bridal party coordination</li>
-                <li>Flexible waiting times</li>
-                <li>Complementary red carpet</li>
+                <li>Dressed or Undressed with Multiple colour combination</li>
+                <li>Garantee to be on time</li>
+                <li>Minibus transfers for wedding guests</li>
             </ul>
             <a href="https://wa.me/+35799009967" class="book-btn" onclick="closePopup()">Book Now</a>
         </div>
@@ -178,21 +177,20 @@
         <div class="popup-content">
             <p>Choices:</p>
             <ul>
-                
                 <li>2 hour Tour:</li>
                 <li>Pick up and drop off from your destination.</li>
                 <li>Guided tour through the ghost Town.</li>
                 <li>Pictures taken and sent to your phone.</li>
                 <li>Price starts from €120</li>
                 <li>4 hour Tour:</li>
-                <li>Pick up and drop off from your destination. </li>
+                <li>Pick up and drop off from your destination.</li>
                 <li>Guided tour through the ghost Town.</li>
                 <li>Tour in the old Town of famagusta.</li>
                 <li>deserts at a nice bakery at the end of the tour</li>
                 <li>Pictures taken and sent to your phone.</li>
                 <li>Price starts from €200</li>
                 <li>6 hour Tour:</li>
-                <li>Pick up and drop off from your destination. </li>
+                <li>Pick up and drop off from your destination.</li>
                 <li>Tour of the Ancient ruins of Salamis</li>
                 <li>Guided tour through the ghost Town.</li>
                 <li>Tour in the old Town of famagusta.</li>
@@ -215,7 +213,6 @@
             <img src="images/34.JPG" alt="Sunset 4">
         </div>
         <div class="popup-content">
-        
             <ul>
                 <li>Love bridge</li>
                 <li>sea caves</li>
@@ -227,6 +224,50 @@
                 <li>Price starting from €100</li>
             </ul>
             <a href="https://wa.me/+35799009967" class="book-btn" onclick="closePopup()">Book This Tour</a>
+        </div>
+    </div>
+    
+    <!-- Quad/Buggy Rental Popup -->
+    <div id="quad-popup" class="popup">
+        <button class="close-btn" onclick="closePopup()">&times;</button>
+        <h3>Quad & Buggy Rentals</h3>
+        <div class="popup-gallery">
+            <img src="images/image10.jpeg" alt="Quad Bike">
+            <img src="images/image7.jpeg" alt="Off-Road Buggy">
+            <img src="images/image8.jpeg" alt="Quad Bike">
+            <img src="images/image9.jpeg" alt="Off-Road Buggy">
+            <img src="images/image6.jpeg" alt="Quad Bike">
+        </div>
+        <div class="popup-content">
+            <p>Our adventure vehicles:</p>
+            <ul>
+                <li>24/7 roadside assistance</li>
+                <li>All rentals include safety equipment</li>
+                <li>Insurance options available</li>
+            </ul>
+            <a href="https://wa.me/+35799009967" class="book-btn" onclick="closePopup()">Rent Now</a>
+        </div>
+    </div>
+    
+    <!-- Car Rental Popup -->
+    <div id="car-rental-popup" class="popup">
+        <button class="close-btn" onclick="closePopup()">&times;</button>
+        <h3>Premium Car Rentals</h3>
+        <div class="popup-gallery">
+            <img src="images/image3.jpeg" alt="Mercedes Rental">
+            <img src="images/image4.jpeg" alt="BMW Rental">
+            <img src="images/image5.jpeg" alt="Mercedes Rental">
+            <img src="images/image4.jpeg" alt="BMW Rental">
+            <img src="images/image13.jpeg" alt="Mercedes Rental">
+            <img src="images/image14.jpeg" alt="BMW Rental">
+        </div>
+        <div class="popup-content">
+            <p>Our fleet:</p>
+            <ul>
+                <li>24/7 roadside assistance</li>
+                <li>Flexible rental periods</li>
+            </ul>
+            <a href="https://wa.me/+35799009967" class="book-btn" onclick="closePopup()">Rent Now</a>
         </div>
     </div>
     

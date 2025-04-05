@@ -38,3 +38,16 @@ document.addEventListener('keydown', function(e) {
         closePopup();
     }
 });
+
+// Better mobile menu handling
+document.querySelectorAll('.category-nav a').forEach(link => {
+    link.addEventListener('touchstart', function() {
+        this.classList.add('touched');
+    });
+    
+    link.addEventListener('touchend', function() {
+        setTimeout(() => {
+            this.classList.remove('touched');
+        }, 150);
+    });
+});
