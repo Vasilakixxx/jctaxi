@@ -518,12 +518,12 @@ footer {
     margin: 15px 0;
 }
 
-.gold-button {
+.gold-book {
     display: block;
     background: #d4af37;
     color: #000;
     padding: 12px;
-    text-align: center;
+    text-align: right;
     border-radius: 5px;
     font-weight: bold;
     margin: 20px 0;
@@ -658,6 +658,23 @@ footer {
 }
 
 .yacht-promo h3 {
+    color: #d4af37;
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+}
+
+.rec-promo {
+    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), 
+    url('images/foodhero.jpg');
+    background-size: cover;
+    padding: 40px 20px;
+    text-align: center;
+    border-top: 3px solid #d4af37;
+    border-bottom: 3px solid #d4af37;
+    margin: 40px 0;
+    height: 400px;
+} 
+.rec-promo h3 {
     color: #d4af37;
     font-size: 1.8rem;
     margin-bottom: 10px;
@@ -850,19 +867,54 @@ footer {
     min-height: 60px;
 }
 
-.gold-button {
-    display: inline-block;
-    background: #d4af37;
-    color: #000;
-    padding: 8px 20px;
-    border-radius: 5px;
-    font-weight: bold;
-    transition: all 0.3s;
+/* Button Container */
+.button-row {
+    display: flex;
+    gap: 10px;
+    margin-top: 15px;
+    align-items: stretch; /* Ensures equal height */
 }
 
-.gold-button:hover {
-    background: #c9a227;
-    transform: translateY(-2px);
+/* Base Button Style - Now with exact same properties */
+.gold-button {
+    flex: 1;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    padding: 10px 5px;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 0.85rem;
+    text-align: center;
+    white-space: nowrap;
+    transition: all 0.3s;
+    height: 38px; /* Fixed height */
+    box-sizing: border-box; /* Includes padding in height */
+    line-height: 1; /* Consistent text alignment */
+    vertical-align: top; /* Removes invisible line-height space */
+    margin: 0; /* Removes any default margins */
+    border-width: 1px; /* Consistent borders */
+}
+
+/* Specific Button Styles */
+.location-btn {
+    background: #d4af37;
+    color: #000;
+    border: 1px solid #d4af37;
+}
+
+.book-btn {
+    background:#d4af37 ;
+    color: #000;
+    border: 1px solid #d4af37;
+}
+
+/* Icon Alignment Fix */
+.gold-button i {
+    font-size: 0.9rem;
+    width: 16px; /* Fixed width */
+    text-align: center;
 }
 
 /* CTA Section */
